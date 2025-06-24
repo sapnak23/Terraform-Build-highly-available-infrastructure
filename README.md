@@ -22,12 +22,12 @@ This setup ensures traffic is distributed across instances for fault tolerance a
 
 ### Resource Group Created
 
-**Azure Portal Screenshot**
-
-![Resource Group - Azure Portal](screenshots/rg-created-azure-portal.png)
-
 **Terraform Output - Git Bash**
 
 ![Terraform Output](screenshots/rg-created-gitbash.png)
+
+**Azure Portal Screenshot**
+
+![Resource Group - Azure Portal](screenshots/rg-created-azure-portal.png)
 
 
