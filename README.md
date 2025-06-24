@@ -19,3 +19,15 @@ Apache web server installed via a custom user data script
 A Public IP for external access
 
 This setup ensures traffic is distributed across instances for fault tolerance and better performance, while allowing web access through a secure and controlled network path.
+
+### Resource Group Created
+
+**Azure Portal Screenshot**
+
+![Resource Group - Azure Portal](screenshots/rg-created-azure-portal.png)
+
+**Terraform Output - Git Bash**
+
+![Terraform Output](screenshots/rg-created-gitbash.png)
+
+
