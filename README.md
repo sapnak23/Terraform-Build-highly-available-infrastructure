@@ -1,20 +1,20 @@
-# Terraform-Build-highly-available-infrastructure
-Build a highly available infrastructure in Azure using Terraform, featuring VNet, subnets, NAT gateway, NSGs, and Linux VMs.
+🌐 Build Highly Available Infrastructure Using Terraform on Azure
+This project demonstrates how to provision a highly available infrastructure on Microsoft Azure using Terraform, an Infrastructure as Code (IaC) tool. The goal is to build a scalable and fault-tolerant environment to host a static website.
 
-This project provisions a highly available Azure infrastructure using Terraform.
-The aim was to create a reliable, scalable, and redundant environment to host a static web application.
+The infrastructure includes:
 
-It includes:
+A Virtual Network (VNet) with multiple subnets across different availability zones
 
-A Virtual Network (VNet) with multiple subnets across availability zones
+A Network Security Group (NSG) to manage inbound/outbound traffic
 
-A NAT gateway for secure outbound internet access
+A public and private subnet setup to enable secure access
 
-Network Security Groups (NSGs) for inbound/outbound rules
+A Load Balancer to ensure high availability
 
-Virtual Machines (Ubuntu Linux) deployed in public subnets
+Two Linux Virtual Machines (Ubuntu) deployed in separate availability zones
 
-Apache server installed on VMs to serve static website content
+Apache web server installed via a custom user data script
 
-The infrastructure is fully defined in code using Terraform, allowing consistent deployment and easy teardown.
+A Public IP for external access
 
+This setup ensures traffic is distributed across instances for fault tolerance and better performance, while allowing web access through a secure and controlled network path.
