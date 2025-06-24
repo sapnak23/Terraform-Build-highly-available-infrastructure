@@ -30,4 +30,8 @@ This setup ensures traffic is distributed across instances for fault tolerance a
 
 ![Resource Group - Azure Portal](screenshots/rg-created-azure-portal.png)
 
+### Vnet, Private subnet, Public subnet Created
+
+![Terraform Output](screenshots/terraform-vnet-subnet-apply.png)
+
 
