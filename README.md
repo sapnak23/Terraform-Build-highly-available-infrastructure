@@ -20,7 +20,7 @@ A Public IP for external access
 
 This setup ensures traffic is distributed across instances for fault tolerance and better performance, while allowing web access through a secure and controlled network path.
 
-### Resource Group Created
+### 1. Resource Group Created
 
 **Terraform Output - Git Bash**
 
@@ -30,8 +30,12 @@ This setup ensures traffic is distributed across instances for fault tolerance a
 
 ![Resource Group - Azure Portal](screenshots/rg-created-azure-portal.png)
 
-### Vnet, Private subnet, Public subnet Created
+### 2. Create Virtual Network & Subnets
 
-![Terraform Output](screenshots/terraform-vnet-subnet-apply.png)
+Terraform output:
+
+![Terraform Apply](./screenshots/terraform-vnet-subnet-apply.png)
+
+Azure Portal view:
 
 
