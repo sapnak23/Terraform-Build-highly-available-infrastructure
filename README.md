@@ -50,4 +50,16 @@ Azure Portal view:
 
 ![NSG Screenshot](screenshots/nsg-web-rules.png)
 
+### 4. NAT Gateway – Private Subnet
+   
+To allow outbound internet access from the private subnet, a NAT Gateway was configured and associated with private-subnet-1.
+
+This configuration allows Linux virtual machines (VMs) in the private subnet to:
+
+Access the internet (for installing packages, updates, etc.)
+
+Without exposing them to any inbound traffic (i.e., they are not directly reachable from the internet)
+
+![NAT Gateway - Private Subnet](./screenshots/nat-gateway-private-subnet.png)
+
 
