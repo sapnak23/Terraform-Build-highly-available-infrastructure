@@ -78,3 +78,19 @@ To host a static website, a Linux Virtual Machine (Ubuntu) was deployed in `publ
 
 📸 Apache Web Server Default Page  
 ![Apache Default Page](screenshots/apache-default-page.png)
+
+### 6. Private Linux VM – No Public Access
+
+A second Ubuntu Linux Virtual Machine was deployed in the **private-subnet-1** without a public IP. This VM uses the NAT Gateway for outbound internet access, ensuring:
+
+- **No direct inbound access from the internet**
+- **Secure and controlled environment**
+- Apache web server installed via cloud-init
+
+**Terraform Git Bash Output**
+
+![Terraform Output](screenshots/private-vm-created-gitbash.png)
+
+**Azure Portal – VM Networking Tab**
+
+![Private VM Networking](screenshots/private-vm-no-public-ip.png)
