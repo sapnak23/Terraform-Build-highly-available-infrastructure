@@ -40,6 +40,14 @@ Azure Portal view:
 
 ![image](https://github.com/user-attachments/assets/3abf5736-6259-44a0-be62-48ca181f7c19)
 
+### 3. Network Security Group (NSG) Configuration
 
+- Created an NSG named `nsg-web` with rules to allow:
+  - **HTTP (port 80)** for web access
+  - **SSH (port 22)** for remote access
+
+- Associated the NSG with the **public subnet** to protect and manage inbound traffic.
+
+![NSG Screenshot](screenshots/nsg-web-rules.png)
 
 
