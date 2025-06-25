@@ -62,4 +62,19 @@ Without exposing them to any inbound traffic (i.e., they are not directly reacha
 
 ![NAT Gateway - Private Subnet](./screenshots/nat-gateway-private-subnet.png)
 
+### 5. Deploy Linux VM in Public Subnet
 
+To host a static website, a Linux Virtual Machine (Ubuntu) was deployed in `public-subnet-1`. The VM was configured using a custom cloud-init script (`custom_data`) that automatically installs and starts Apache.
+
+**Key Configurations:**
+- 🔐 SSH key generated via `tls_private_key`
+- 🖥️ VM image: Ubuntu Server 18.04-LTS
+- 🌐 Apache installed and started on boot
+- 🔒 NSG (`nsg-web`) allows ports 22 (SSH) and 80 (HTTP)
+- 🌍 Public IP assigned for external web access
+
+📸 VM Overview with Public IP  
+![VM Public Overview](screenshots/vm-public-overview.png)
+
+📸 Apache Web Server Default Page  
+![Apache Default Page](screenshots/apache-default-page.png)
