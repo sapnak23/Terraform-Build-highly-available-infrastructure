@@ -38,4 +38,8 @@ Terraform output:
 
 Azure Portal view:
 
+![image](https://github.com/user-attachments/assets/3abf5736-6259-44a0-be62-48ca181f7c19)
+
+
+
 
