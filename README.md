@@ -94,3 +94,25 @@ A second Ubuntu Linux Virtual Machine was deployed in the **private-subnet-1** w
 **Azure Portal – VM Networking Tab**
 
 ![Private VM Networking](screenshots/private-vm-no-public-ip.png)
+
+### 7. Azure Load Balancer Setup
+
+To ensure high availability and distribute incoming traffic evenly across virtual machines, an Azure Load Balancer was created and configured.
+
+**Key Components:**
+
+- **Public IP**: Assigned to the Load Balancer for external access
+- **Backend Address Pool**: Includes the NIC of the VM to receive traffic
+- **Health Probe**: Checks HTTP port (80) to monitor backend VM health
+- **Load Balancing Rule**: Routes incoming HTTP traffic to the backend pool
+
+📸 **Terraform Plan and Apply Output**
+![Terraform Apply LB](screenshots/lb-plan-apply.png)
+
+📸 **Load Balancer Configuration in Azure Portal**
+![Azure Portal LB](screenshots/lb-overview.png)
+
+![Azure Portal LB](screenshots/lb-backend-pool.png).
+
+
+
