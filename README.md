@@ -10,7 +10,7 @@ It features:
 - End-to-end automation and real infrastructure screenshots
 This setup ensures traffic is distributed across instances for fault tolerance and better performance, while allowing web access through a secure and controlled network path.
 
-## 🧭 Architecture Diagram
+## Architecture Diagram
 
 This diagram illustrates the infrastructure provisioned by Terraform for high availability on Azure:
 
