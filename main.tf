@@ -75,7 +75,6 @@ resource "azurerm_network_security_group" "nsg_web" {
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
-
   security_rule {
     name                       = "AllowSSH"
     priority                   = 110
@@ -115,27 +114,43 @@ resource "azurerm_linux_virtual_machine" "public_vm" {
     username   = "azureuser"
     public_key = tls_private_key.ssh_key.public_key_openssh
   }
-
-  os_disk {
+ os_disk {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
   }
 
- source_image_reference {
+  source_image_reference {
     publisher = "Canonical"
     offer     = "UbuntuServer"
     sku       = "18.04-LTS"
     version   = "latest"
   }
 
-  custom_data = base64encode(<<EOF
+    custom_data = base64encode(<<EOF
 #!/bin/bash
 sudo apt update -y
 sudo apt install apache2 -y
+echo "<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to My Azure Infrastructure</title>
+    <style>
+      body { font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; padding: 50px; }
+      h1 { color: #2c3e50; }
+      p { font-size: 20px; color: #34495e; }
+    </style>
+  </head>
+  <body>
+    <h1>Hello, I'm Sapna </h1>
+    <p>Welcome to my Highly Available Azure Infrastructure Project</p>
+    <p>This web server is deployed using Terraform and hosted on an Apache server inside a virtual machine.</p>
+  </body>
+</html>" > /var/www/html/index.html
 sudo systemctl enable apache2
 sudo systemctl start apache2
 EOF
   )
+
 
   tags = {
     environment = "public"
@@ -199,21 +214,38 @@ resource "azurerm_linux_virtual_machine" "private_vm" {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
   }
- source_image_reference {
+
+  source_image_reference {
     publisher = "Canonical"
     offer     = "UbuntuServer"
     sku       = "18.04-LTS"
     version   = "latest"
   }
-
-  custom_data = base64encode(<<EOF
+      custom_data = base64encode(<<EOF
 #!/bin/bash
 sudo apt update -y
 sudo apt install apache2 -y
+echo "<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to My Azure Infrastructure</title>
+    <style>
+      body { font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; padding: 50px; }
+      h1 { color: #2c3e50; }
+      p { font-size: 20px; color: #34495e; }
+    </style>
+  </head>
+  <body>
+    <h1>Hello, I'm Sapna Kamble</h1>
+    <p>Welcome to my Highly Available Azure Infrastructure Project</p>
+    <p>This web server is deployed using Terraform and hosted on an Apache server inside a virtual machine.</p>
+  </body>
+</html>" > /var/www/html/index.html
 sudo systemctl enable apache2
 sudo systemctl start apache2
 EOF
   )
+
 
   tags = {
     environment = "private"
@@ -278,4 +310,23 @@ resource "azurerm_network_interface_backend_address_pool_association" "nic_lb_as
   backend_address_pool_id = azurerm_lb_backend_address_pool.bepool.id
 }
 
+# Output Values
+output "public_vm_ip" {
+  description = "Public IP address of the public Linux VM"
+  value       = azurerm_public_ip.vm_public_ip.ip_address
+}
 
+output "load_balancer_ip" {
+  description = "Public IP of the Load Balancer"
+  value       = azurerm_public_ip.lb_public_ip.ip_address
+}
+
+output "resource_group_name" {
+  description = "The name of the Resource Group"
+  value       = azurerm_resource_group.rg.name
+}
+
+output "virtual_network_name" {
+  description = "The name of the Virtual Network"
+  value       = azurerm_virtual_network.vnet.name
+}
