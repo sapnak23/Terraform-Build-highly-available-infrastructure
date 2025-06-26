@@ -1,4 +1,4 @@
-# Highly Available Web Infrastructure on Azure using Terraform
+# Build highly Available Web Infrastructure on Azure using Terraform
 
 This project demonstrates how to provision a highly available infrastructure on Microsoft Azure using **Terraform**, an Infrastructure as Code (IaC) tool. The goal is to build a scalable and fault-tolerant environment to host a static website.
 
