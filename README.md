@@ -122,4 +122,23 @@ To personalize the project and replace the default Apache page, a custom `index.
 
 ![Custom Apache Page](screenshots/sapna-custom-page.png)
 
+---
+
+### 9.✅ Terraform Outputs
+
+After successful execution of `terraform apply`, the following key outputs were returned:
+
+- **Public VM IP Address**: Displays the public IP of the Linux VM in the public subnet.
+- **Load Balancer Public IP**: IP through which the Load Balancer routes HTTP traffic to the backend.
+- **Resource Group Name**: The name of the Azure resource group used to contain all resources.
+- **Virtual Network Name**: The name of the virtual network created for this infrastructure.
+
+📸 Screenshot: Terraform apply showing outputs  
+![Terraform Output Screenshot](screenshots/terraform-output.png)
+
+---
+
+This confirms that all Azure infrastructure was successfully provisioned and is ready to serve a static web page via a highly available setup.
+
+
 
