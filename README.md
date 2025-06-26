@@ -118,6 +118,8 @@ To ensure high availability and distribute incoming traffic evenly across virtua
 
 To personalize the project and replace the default Apache page, a custom `index.html` was deployed using Terraform `custom_data`. It introduces the developer and describes the purpose of the project.
 
-📸 Custom Apache Page with Developer Name – `sapna-custom-page.png`
+📸 Custom Apache Page with Developer Name
+
+![Custom Apache Page](screenshots/sapna-custom-page.png)
 
 
