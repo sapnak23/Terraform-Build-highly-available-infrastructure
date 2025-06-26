@@ -114,5 +114,10 @@ To ensure high availability and distribute incoming traffic evenly across virtua
 
 ![Azure Portal LB](screenshots/lb-backend-pool.png).
 
+### 8. Custom HTML Page with Developer Identity
+
+To personalize the project and replace the default Apache page, a custom `index.html` was deployed using Terraform `custom_data`. It introduces the developer and describes the purpose of the project.
+
+📸 Custom Apache Page with Developer Name – `sapna-custom-page.png`
 
 
