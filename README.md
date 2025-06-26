@@ -64,10 +64,10 @@ To host a static website, a Linux Virtual Machine (Ubuntu) was deployed in `publ
 - 🔒 NSG (`nsg-web`) allows ports 22 (SSH) and 80 (HTTP)
 - 🌍 Public IP assigned for external web access
 
-📸 VM Overview with Public IP  
+VM Overview with Public IP  
 ![VM Public Overview](screenshots/vm-public-overview.png)
 
-📸 Apache Web Server Default Page  
+Apache Web Server Default Page  
 ![Apache Default Page](screenshots/apache-default-page.png)
 
 ### 6. Private Linux VM – No Public Access
@@ -97,10 +97,10 @@ To ensure high availability and distribute incoming traffic evenly across virtua
 - **Health Probe**: Checks HTTP port (80) to monitor backend VM health
 - **Load Balancing Rule**: Routes incoming HTTP traffic to the backend pool
 
-📸 **Terraform Plan and Apply Output**
+**Terraform Plan and Apply Output**
 ![Terraform Apply LB](screenshots/lb-plan-apply.png)
 
-📸 **Load Balancer Configuration in Azure Portal**
+**Load Balancer Configuration in Azure Portal**
 ![Azure Portal LB](screenshots/lb-overview.png)
 
 ![Azure Portal LB](screenshots/lb-backend-pool.png).
@@ -109,7 +109,7 @@ To ensure high availability and distribute incoming traffic evenly across virtua
 
 To personalize the project and replace the default Apache page, a custom `index.html` was deployed using Terraform `custom_data`. It introduces the developer and describes the purpose of the project.
 
-📸 Custom Apache Page with Developer Name
+Custom Apache Page with Developer Name
 
 ![Custom Apache Page](screenshots/sapna-custom-page.png)
 
@@ -124,7 +124,7 @@ After successful execution of `terraform apply`, the following key outputs were 
 - **Resource Group Name**: The name of the Azure resource group used to contain all resources.
 - **Virtual Network Name**: The name of the virtual network created for this infrastructure.
 
-📸 Screenshot: Terraform apply showing outputs  
+Screenshot: Terraform apply showing outputs  
 ![Terraform Output Screenshot](screenshots/terraform-output.png)
 
 ---
